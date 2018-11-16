@@ -11,10 +11,22 @@ apt-get install w3m -y
 apt-get install mutt -y
 apt-get install iputils-ping -y
 apt-get install curl -y
+apt-get install git -y
 
 cp /host/.tmux.conf ~/
 cp /host/.muttrc ~/
 cp /host/.mailcap ~/
+
+# NodeJS for Linux Mint
+apt-get install python-software-properties
+curl -sL https://deb.nodesource.com/setup_11.x | bash -
+apt-get install nodejs -y
+
+
+#VUNDLE Installation for VIM
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+cp /host/.vimrc ~/
+
 
 # set central timezone
 rm /etc/localtime
