@@ -1,0 +1,19 @@
+#!/bin/bash
+
+apt-get update
+apt-get install vim -y
+apt-get install net-tools -y
+apt-get install tmux -y
+apt-get install w3m -y
+apt-get install iputils-ping -y
+apt-get install curl -y
+
+cp ./.tmux.conf ~/
+
+#Set timezone to Central (or whatever)
+rm /etc/localtime
+ln -s /usr/share/zoneinfo/US/Central /etc/localtime
+
+#Simplify Command Prompt
+PS1="\w/ $ "
+ 
