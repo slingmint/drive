@@ -1,0 +1,41 @@
+#!/bin/bash
+
+function write-header {
+	echo "---------------------------------------------------"
+	echo "- $1"
+	echo "---------------------------------------------------"
+}
+
+
+write-header "WIFI Interface Configuration"
+
+iwconfig | grep wlp
+
+read -p "Enter name of WIFI interface: " interface
+
+write-header "Access Point Determination"
+
+sudo iwlist $interface scan | grep ESSID
+
+read -p "Enter name of Access Point: " accesspoint
+
+echo -n "Password for $accesspoint: "
+read -s pwd
+echo
+
+
+write-header "Connecting to access point"
+sudo rm /etc/wpa_supplicant.conf
+wpa_passphrase $accesspoint $pwd | sudo tee /etc/wpa_supplicant.conf
+sudo wpa_supplicant -B -c /etc/wpa_supplicant.conf -i $interface
+
+write-header "Attempting to obtain IP Address"
+sudo dhclient $interface
+
+write-header "IP Settings"
+iwconfig $interface
+ifconfig $interface
+
+
+
+
