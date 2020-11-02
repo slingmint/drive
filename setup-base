@@ -1,0 +1,12 @@
+#!/bin/bash
+
+apt-get update
+apt-get install vim net-tools iputils-ping curl -y
+
+#Set timezone to Central (or whatever)
+rm /etc/localtime
+ln -s /usr/share/zoneinfo/US/Central /etc/localtime
+
+#Simplify Command Prompt
+PS1="\w/ $ "
+ 
