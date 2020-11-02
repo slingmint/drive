@@ -1,0 +1,10 @@
+!bin/bash....
+
+sudo apt-get install git -y
+
+sudo mkdir ~/git
+cd ~/git
+git clone https://github.com/slingmint/drive
+cd ~/git/drive
+sudo ./setup-base
+
