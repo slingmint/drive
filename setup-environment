@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo ./setup-environment
+sudo ./configure-wifi
 
 sudo apt-get install git -y
 
