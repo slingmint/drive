@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo ./setup-environment
+
 sudo apt-get install git -y
 
 sudo mkdir ~/git
