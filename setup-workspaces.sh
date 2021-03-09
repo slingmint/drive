@@ -2,12 +2,7 @@
 
 # Download Applets
 
-
-
-sudo cat ~/.local/share/cinnamon/applets/workspace-grid@hernejj/settings-schema.json | jq '.numCols.value = 3'  | jq '.numRows.value = 3' > ~/.cinnamon/configs/workspace-grid@hernejj/workspace-grid@hernejj.json
-
-
-#cd ~
+cd ~
 
 #sudo wget https://cinnamon-spices.linuxmint.com/files/applets/workspace-grid@hernejj.zip
 
@@ -16,5 +11,7 @@ sudo cat ~/.local/share/cinnamon/applets/workspace-grid@hernejj/settings-schema.
 
 #sudo apt-get install jq -y
 
-#sudo cat ~/.cinnamon/configs/workspace-grid@hernejj/workspace-grid@hernejj.json | jq '.numCols.value = 2, .numRows.value=4' > ~/.cinnamon/configs/workspace-grid@hernjj/workspace3-grid@hernjj.json
+sudo cat ~/.local/share/cinnamon/applets/workspace-grid@hernejj/settings-schema.json | jq '.numCols.value = 3'  | jq '.numRows.value = 3' > ~/.cinnamon/configs/workspace-grid@hernejj/workspace-grid@hernejj.json
+
+
 
