@@ -1,7 +1,7 @@
 #!/bin/bash
 
-apt-get update
-apt-get install vim net-tools iputils-ping curl -y
+sudo apt-get update
+sudo apt-get install vim net-tools iputils-ping curl -y
 
 #Set timezone to Central (or whatever)
 rm /etc/localtime
@@ -31,6 +31,5 @@ sudo apt-get install fonts-powerline -y
 
 
 
-sudo mv ~/.config/i3/config ~/.config/i3/config-old
-sudo ln ~/git/drive/i3/config ~/.config/i3/config
-
+mv ~/.config/i3/config ~/.config/i3/config-old
+ln ~/git/drive/i3/config ~/.config/i3/config
