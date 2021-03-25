@@ -4,8 +4,8 @@ sudo apt-get update
 sudo apt-get install vim net-tools iputils-ping curl -y
 
 #Set timezone to Central (or whatever)
-rm /etc/localtime
-ln -s /usr/share/zoneinfo/US/Central /etc/localtime
+sudo rm /etc/localtime
+sudo ln -s /usr/share/zoneinfo/US/Central /etc/localtime
 
 #Simplify Command Prompt
 PS1="\w/ $ "
@@ -16,6 +16,7 @@ ln -s ~/git/drive/config-link/.vimrc ~/.vimrc
 
 
 #GIT
+sudo git config --global user.email "slingmint@gmail.com"
 git config --global user.email "slingmint@gmail.com"
 
 
@@ -30,6 +31,7 @@ sudo apt-get install fonts-font-awesome -y
 sudo apt-get install fonts-powerline -y
 
 
-
+mkdir ~/.config/i3
 mv ~/.config/i3/config ~/.config/i3/config-old
+#note if the above two fail, that's ok ... they handle install and uninstall together (one will always fail)
 ln ~/git/drive/i3/config ~/.config/i3/config
