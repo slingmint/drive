@@ -10,12 +10,13 @@ ln -s /usr/share/zoneinfo/US/Central /etc/localtime
 #Simplify Command Prompt
 PS1="\w/ $ "
 
-
+#VIM Configuration
 sudo git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 sudo ln -s ~/git/drive/config-link/.vimrc ~/.vimrc
 
 
-
+#GIT
+sudo git config --global user.email "slingmint@gmail.com"
 
 
 #i3
