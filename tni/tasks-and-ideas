@@ -1,0 +1,14 @@
+
+
+* installing optional components:
+    * /root/optional
+            ./install-x
+            ./install-y
+            ./install-optional.sh
+                run each sh file in /root/optional/install then remove the files
+    * just need to copy the files you wan to install to the /root/optional/install directory
+
+    * or something easy like that to run multiple installers with one command rather than having to wait and run each individually
+
+* Also, need to modify git clone to move towards devops
+

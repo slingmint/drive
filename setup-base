@@ -35,3 +35,21 @@ mkdir ~/.config/i3
 mv ~/.config/i3/config ~/.config/i3/config-old
 #note if the above two fail, that's ok ... they handle install and uninstall together (one will always fail)
 ln ~/git/drive/i3/config ~/.config/i3/config
+
+
+#GNOME-TERMINAL
+echo "[:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
+backgroud-color='rgb(0,0,0)'
+font='DejaVu Sans Mono 18'
+foreground-color='rgb(0,255,0)'
+use-system-font=false
+use-theme-colors=false" > ~/gnome-terminal-temp
+
+dconf load /org/gnome/terminal/legacy/profiles:/ < ~/gnome-terminal-temp
+
+rm ~/gnome-terminal-temp
+
+
+
+
+
